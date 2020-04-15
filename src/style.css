@@ -11,6 +11,7 @@ body,
 #root {
   min-height: 100%;
   width: 100%;
+  background-color: #fff;
 }
 
 .cl_green {
@@ -19,4 +20,36 @@ body,
 
 .bg_green {
   background-color: #44ab7a;
+}
+
+.bg_blue {
+  background-color: #5eabc3;
+}
+
+.bg_purple {
+  background-color: #6e5be3;
+}
+
+.bg_orange {
+  background-color: #e3bd5b;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.863);
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s, z-index 1s;
+  position: fixed;
+}
+
+.loader_loaded {
+  opacity: 0;
+  z-index: -1;
 }

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import OrbitControls from "three/src/orbitControls";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import generateRenderer from "./renderer";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -37,7 +37,7 @@ export default function main() {
       (function animate() {
         requestAnimationFrame(animate);
         controls.update();
-        gltf.scene.rotation.y += 0.01;
+        gltf.scene.rotation.y += 0.005;
         renderer.render(scene, camera);
       })();
     },
