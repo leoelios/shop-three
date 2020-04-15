@@ -43,7 +43,7 @@
 .add_cart_btn {
   border: none;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: #ededed;
   color: #535353;
   font-size: 20px;
@@ -52,6 +52,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.add_cart_btn:hover {
+  background-color: rgb(219, 219, 219);
 }
 
 .plus {
@@ -63,4 +67,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.dp_none {
+  display: none;
+}
+
+.one_more {
+  animation: test 0.8s;
+  color: #b0b0b0;
+  position: absolute;
+  top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1px;
+}
+
+@keyframes test {
+  0% {
+    font-size: 1px;
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: rotate(-10deg);
+    font-size: 50px;
+  }
+  80% {
+    font-size: 50px;
+    transform: rotate(10deg);
+  }
+  100% {
+    font-size: 1px;
+    transform: rotate(-5deg);
+  }
 }

@@ -18,10 +18,18 @@ export default class Main extends React.Component {
   }
 
   componentDidMount() {
-    const { renderer } = render();
+    const { renderer } = render("blue");
     document.querySelector(".display_product").appendChild(renderer.domElement);
     setTimeout(() => {
       document.querySelector(".loading").classList.add("loader_loaded");
+    }, 1000);
+  }
+
+  handleCart(e) {
+    const oneMore = document.querySelector(".one_more");
+    oneMore.classList.remove("dp_none");
+    setTimeout(() => {
+      oneMore.classList.add("dp_none");
     }, 1000);
   }
 
@@ -38,7 +46,13 @@ export default class Main extends React.Component {
           <span className="ctr_price">R$ 59,20</span>
           <span className="price cl_green">R$ 29,99</span>
         </div>
-        <button className="add_cart_btn">
+        <div className="one_more dp_none">+1</div>
+        <button
+          onClick={() => {
+            this.handleCart();
+          }}
+          className="add_cart_btn"
+        >
           <FaPlus className="plus" />
           Add to Cart
         </button>

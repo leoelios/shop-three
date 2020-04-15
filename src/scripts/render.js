@@ -5,7 +5,7 @@ import generateRenderer from "./renderer";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import addPro from "./addPro";
 
-export default function main() {
+export default function main(color) {
   const widthCan = 300;
   const heightCan = 370;
   const scene = new THREE.Scene();
@@ -27,8 +27,9 @@ export default function main() {
   camera.position.z = 63;
   // Load objects to scene
   const loader = new GLTFLoader();
+
   loader.load(
-    "./Model/Tshirt/scene.gltf",
+    `./Model/Tshirt/${color}.gltf`,
     (gltf) => {
       scene.add(gltf.scene);
       gltf.scene.position.y = -25;
