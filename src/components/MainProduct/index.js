@@ -29,6 +29,10 @@ export default class Main extends React.Component {
           <div className="display_product" />
           <img src={ArrowRight} alt="Arrow to Right" />
         </div>
+        <div className="price_sec">
+          <span className="ctr_price">R$ 59,20</span>
+          <span className="price cl_green">R$ 29,99</span>
+        </div>
       </div>
     );
   }

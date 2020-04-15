@@ -20,3 +20,22 @@
 .display_product:hover {
   cursor: move;
 }
+
+.price_sec {
+  display: flex;
+  flex-direction: column;
+}
+
+.price_sec > * {
+  font-family: "Roboto", sans-serif;
+}
+
+.ctr_price {
+  text-decoration: line-through;
+  color: #b0b0b0;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+}
