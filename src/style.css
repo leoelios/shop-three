@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Rufina", serif;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+}
+
+.cl_green {
+  color: #44ab7a;
+}
+
+.bg_green {
+  background-color: #44ab7a;
+}

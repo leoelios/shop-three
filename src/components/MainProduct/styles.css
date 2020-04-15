@@ -1,0 +1,22 @@
+.main_content {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.title_product {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.toggle_display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.display_product:hover {
+  cursor: move;
+}
