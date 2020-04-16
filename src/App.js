@@ -7,6 +7,7 @@ import ReactLoading from "react-loading";
 import HeaderProduct from "./components/HeaderProduct/index";
 import Main from "./components/MainProduct/index";
 import FooterAbout from "./components/FooterAbout/index";
+import Details from "./components/Details/index";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <HeaderProduct />
       <Main />
       <FooterAbout />
+      <Details />
     </>
   );
 }

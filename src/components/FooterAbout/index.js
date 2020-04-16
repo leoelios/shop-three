@@ -9,7 +9,7 @@ export default function Footer() {
   const [sizeOfClothe, setSizeOfClothe] = useState("PP");
 
   const switchColor = (color) => {
-    const { renderer } = render(color);
+    const { renderer } = render(color, true);
     document.querySelector(".display_product").innerHTML = "";
     document.querySelector(".display_product").appendChild(renderer.domElement);
   };

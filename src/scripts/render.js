@@ -5,7 +5,7 @@ import generateRenderer from "./renderer";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import addPro from "./addPro";
 
-export default function main(color) {
+export default function main(color, colored, nameOfModel) {
   const widthCan = 300;
   const heightCan = 370;
   const scene = new THREE.Scene();
@@ -21,18 +21,31 @@ export default function main(color) {
   const controls = new OrbitControls(camera, renderer.domElement);
   addPro(scene);
 
-  // camera.position.z = 100;
-  // camera.position.y = 20;
-  // camera.position.x = 140;
-  camera.position.z = 63;
+  // DA CAMISETA PADRAO: camera.position.z = 63;
   // Load objects to scene
   const loader = new GLTFLoader();
 
+  // DA CAMISA DE GARCOM: camera.position.z = 1;
+
+  let url;
+  if (colored) {
+    url = `./Model/Tshirt/${color}.gltf`;
+    camera.position.z = 60;
+  } else {
+    url = `./Model/Tshirt/${nameOfModel}/scene.gltf`;
+    camera.position.z = 1;
+  }
+
+  if (nameOfModel === "Vestido") {
+    camera.position.z = 300;
+  }
   loader.load(
-    `./Model/Tshirt/${color}.gltf`,
+    url,
     (gltf) => {
       scene.add(gltf.scene);
-      gltf.scene.position.y = -25;
+      if (colored === true) {
+        gltf.scene.position.y = -25;
+      }
       // Add scene to renderer canvas
       controls.update();
       (function animate() {

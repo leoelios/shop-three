@@ -14,8 +14,13 @@ body,
   background-color: #fff;
 }
 
+.sub_title {
+  font-size: 27px;
+  font-weight: normal;
+}
+
 .cl_green {
-  color: #44ab7a;
+  color: #44ab7a !important;
 }
 
 .bg_green {
