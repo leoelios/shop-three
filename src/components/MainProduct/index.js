@@ -17,11 +17,16 @@ export default class Main extends React.Component {
     this.state = {
       canvas: null,
       lastModel: 0,
+      presentObject: ArrayModel[0],
     };
   }
 
   componentDidMount() {
-    const { renderer } = render(null, false, ArrayModel[this.state.lastModel]);
+    const { renderer } = render(
+      null,
+      false,
+      ArrayModel[this.state.lastModel].name
+    );
     document.querySelector(".display_product").appendChild(renderer.domElement);
     setTimeout(() => {
       document.querySelector(".loading").classList.add("loader_loaded");
@@ -37,7 +42,11 @@ export default class Main extends React.Component {
   }
 
   componentDidUpdate() {
-    const { renderer } = render(null, false, ArrayModel[this.state.lastModel]);
+    const { renderer } = render(
+      null,
+      false,
+      ArrayModel[this.state.lastModel].name
+    );
     const displayProduct = document.querySelector(".display_product");
     displayProduct.innerHTML = " ";
     document.querySelector(".display_product").appendChild(renderer.domElement);
@@ -49,6 +58,7 @@ export default class Main extends React.Component {
     if (lastModel + 1 < totalItems) {
       this.setState({
         lastModel: lastModel + 1,
+        presentObject: ArrayModel[this.state.lastModel + 1],
       });
     }
   }
@@ -58,14 +68,16 @@ export default class Main extends React.Component {
     if (lastModel - 1 >= 0) {
       this.setState({
         lastModel: lastModel - 1,
+        presentObject: ArrayModel[this.state.lastModel - 1],
       });
     }
   }
 
   render() {
+    const { presentObject } = this.state;
     return (
       <div className="main_content">
-        <h2 className="cl_green title_product">Basic T-shirt</h2>
+        <h2 className="cl_green title_product">{presentObject.nameDisplay}</h2>
         <div className="toggle_display">
           <img
             src={ArrowLeft}
@@ -84,8 +96,8 @@ export default class Main extends React.Component {
           />
         </div>
         <div className="price_sec">
-          <span className="ctr_price">R$ 59,20</span>
-          <span className="price cl_green">R$ 29,99</span>
+          <span className="ctr_price">R$ {presentObject.ctrPrice}</span>
+          <span className="price cl_green">R$ {presentObject.price}</span>
         </div>
         <div className="one_more dp_none">+1</div>
         <button
