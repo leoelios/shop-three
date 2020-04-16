@@ -22,6 +22,7 @@
 }
 
 .price_sec {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -56,6 +57,10 @@
 }
 .add_cart_btn:hover {
   background-color: rgb(219, 219, 219);
+}
+
+.arrow {
+  margin: 0 30px;
 }
 
 .plus {

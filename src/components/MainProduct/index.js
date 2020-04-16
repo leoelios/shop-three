@@ -81,6 +81,7 @@ export default class Main extends React.Component {
         <div className="toggle_display">
           <img
             src={ArrowLeft}
+            className="arrow"
             alt="Arrow to left"
             onClick={() => {
               this.prevModel();
@@ -89,6 +90,7 @@ export default class Main extends React.Component {
           <div className="display_product"></div>
           <img
             src={ArrowRight}
+            className="arrow"
             alt="Arrow to Right"
             onClick={() => {
               this.nextModel();
