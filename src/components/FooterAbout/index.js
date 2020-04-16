@@ -3,13 +3,32 @@ import React from "react";
 import render from "../../scripts/render";
 
 import "./style.css";
+import { useState } from "react";
 
 export default function Footer() {
+  const [sizeOfClothe, setSizeOfClothe] = useState("PP");
+
   const switchColor = (color) => {
     const { renderer } = render(color);
     document.querySelector(".display_product").innerHTML = "";
     document.querySelector(".display_product").appendChild(renderer.domElement);
-    console.log(color);
+  };
+
+  const switchSize = (clickedSize) => {
+    // Get allSizes of clothe
+    const allSizes = document.querySelectorAll(".size_item");
+
+    if (clickedSize !== sizeOfClothe) {
+      for (let x = 0; x < allSizes.length; x++) {
+        const classes = allSizes[x].attributes[0].value.split(" ");
+        if (classes.length > 1) {
+          allSizes[x].classList.remove("size_actived");
+        } else if (allSizes[x].innerHTML === clickedSize) {
+          allSizes[x].classList.add("size_actived");
+        }
+      }
+      setSizeOfClothe(clickedSize);
+    }
   };
 
   return (
@@ -37,11 +56,46 @@ export default function Footer() {
         </div>
       </div>
       <div className="colors_and_sizes colors">
-        <span className="size_item size_actived">PP</span>
-        <span className="size_item">P</span>
-        <span className="size_item">M</span>
-        <span className="size_item">G</span>
-        <span className="size_item">GG</span>
+        <span
+          onClick={() => {
+            switchSize("PP");
+          }}
+          className="size_item size_actived"
+        >
+          PP
+        </span>
+        <span
+          onClick={() => {
+            switchSize("P");
+          }}
+          className="size_item"
+        >
+          P
+        </span>
+        <span
+          onClick={() => {
+            switchSize("M");
+          }}
+          className="size_item"
+        >
+          M
+        </span>
+        <span
+          onClick={() => {
+            switchSize("G");
+          }}
+          className="size_item"
+        >
+          G
+        </span>
+        <span
+          onClick={() => {
+            switchSize("GG");
+          }}
+          className="size_item"
+        >
+          GG
+        </span>
       </div>
     </div>
   );

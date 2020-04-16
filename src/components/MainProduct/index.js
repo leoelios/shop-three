@@ -36,7 +36,7 @@ export default class Main extends React.Component {
   render() {
     return (
       <div className="main_content">
-        <h2 className="cl_green title_product">Basic White T-shirt</h2>
+        <h2 className="cl_green title_product">Basic T-shirt</h2>
         <div className="toggle_display">
           <img src={ArrowLeft} alt="Arrow to left" />
           <div className="display_product"></div>
