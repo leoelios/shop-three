@@ -5,7 +5,7 @@
   </a>
 </p>
 <p align="center">
-  <img src="https://i.imgur.com/KWXG7jl.png" />
+  <img src="https://i.imgur.com/KSJQXIm.mp4" />
 </p>
   
 ## :page_with_curl: Description 
