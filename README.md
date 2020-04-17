@@ -37,4 +37,4 @@ However, have a possible of you add a new models 3d in store.
 ```
 5. Finish! Just open the application.
 
-## Happy coding!
+## :tada: Happy coding!
