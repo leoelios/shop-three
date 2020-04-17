@@ -1,17 +1,16 @@
 <h1 align="center">:shirt: ThreeShop</h1>
-  <p align="center">
-    <a href="https://opensource.org/licenses/MIT">
-       <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-    </a>
-  </p>
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/KWXG7jl.png" />
+</p>
   
 ## :page_with_curl: Description 
 It's a fictional clothing store, the difference is in the way in which the products are presented for client. All clothes are presented in 3D (three dimensions).
 However, have a possible of you add a new models 3d in store.
-
-<p align="center">
-  <img src="https://www.iphouse.com.br/blog/wp-content/uploads/2017/04/O-QUE-E-ECOMMERCE.jpg" />
-</p>
 
 ## :eyes: Mandatory Dependencies
 - [Node](https://nodejs.org/en/)
